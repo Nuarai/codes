@@ -1,10 +1,11 @@
 from itertools import combinations
 
-# ----- ниаких ограничений на встроенные библиотеки нету =) -----
-
 n, k = map(int, input().split())
+seg = []
 
 for comb in combinations(range(1, n + 1), k):
-    seg = comb[::-1]
-    print(*seg)
+    seg.append(comb[::-1])
+
+for _ in sorted(seg):
+    print(*list(_))
 
